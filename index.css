@@ -1,0 +1,92 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+    background: #faf8ef;
+    color: #776e65;
+    text-align: center;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 18px;
+}
+h1 {
+    font-size: 60px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper {
+    width: 500px;
+    margin: 100px auto;
+}
+.restart-button {
+    display: flex;
+    align-items: center;
+    background: #8f7a66;
+    border-radius: 3px;
+    padding: 0 20px;
+    color: #f9f6f2;
+    font-weight: bold;
+}
+.scores-container {
+    display: flex;
+    padding: 30px 0;
+    text-align: left;
+    color: #f9f6f2;
+}
+.score, .best-result {
+    position: relative;
+    width: 90px;
+    margin-right: 10px;
+    padding: 30px 20px 5px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    text-align: center;
+}
+.score::before, .best-result::before {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 100%;
+    color: #eee4da;
+}
+.score::before {
+    content: "Счет";
+}
+.best-result::before {
+    content: "Рекорд";
+}
+
+/* Game grid*/
+
+.game-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin-top: 40px;
+    padding: 15px;
+    background: #bbada0;
+    border-radius: 6px;
+    cursor: default;
+}
+.grid-container {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    z-index: 1;
+}
+.grid-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 106px;
+    height: 106px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    font-size: 40px;
+    font-weight: bold;
+    transition: all .3s;
+}
